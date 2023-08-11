@@ -211,5 +211,59 @@ html {
     position: relative;
     margin-bottom: 25px;
     transition: all .5s;
-}
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
+            margin: 10px;
+            width: 90%;
+            padding-left: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+
+        }
+
+        @media screen and (min-width: 1100px) {
+            margin-right: 50px;
+        }
+    }
+
+    &__cards .card:hover {
+        background: linear-gradient(200.64deg, #9256dc34 -5.2%, #ff79d938 110.74%);
+        transform: translateY(-5px);
+    }
+
+    &__cards .card h3 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        @media screen and (max-width: 1000px) and (min-width: 1100px) {
+            font-size: 14px;
+        }
+    }
+
+    &__cards .card i {
+        color: #7E7E7E;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    &__cards .card:hover>.fa-solid {
+        color: $primary-color;
+    }
+
+    &__cards .numeros {
+        position: absolute;
+        left: -10px;
+        width: 24px;
+        height: 24px;
+        background-color: $primary-color;
+        font-weight: 500;
+        font-size: 14.1818px;
+        line-height: 17px;
+        color: white;
+        border-radius: 50%;
+        @include display-flex-center;
+    }
 }

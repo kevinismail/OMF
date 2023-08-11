@@ -263,4 +263,57 @@ html {
   position: relative;
   margin-bottom: 25px;
   transition: all 0.5s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .fonctionnement__cards .card {
+    margin: 10px;
+    width: 90%;
+    padding-left: 0px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .fonctionnement__cards .card {
+    margin-right: 50px;
+  }
+}
+.fonctionnement__cards .card:hover {
+  background: linear-gradient(200.64deg, rgba(146, 86, 220, 0.2039215686) -5.2%, rgba(255, 121, 217, 0.2196078431) 110.74%);
+  transform: translateY(-5px);
+}
+.fonctionnement__cards .card h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+@media screen and (max-width: 1000px) and (min-width: 1100px) {
+  .fonctionnement__cards .card h3 {
+    font-size: 14px;
+  }
+}
+.fonctionnement__cards .card i {
+  color: #7E7E7E;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.fonctionnement__cards .card:hover > .fa-solid {
+  color: #9356DC;
+}
+.fonctionnement__cards .numeros {
+  position: absolute;
+  left: -10px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  font-weight: 500;
+  font-size: 14.1818px;
+  line-height: 17px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
