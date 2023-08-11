@@ -52,7 +52,7 @@ html {
 /** Navigation**/
 
 .navigation {
-    widht: 100%;
+    width: 100%;
     height: 113px;
 &__logo {
     height: 63px;
@@ -98,5 +98,70 @@ html {
         }
     }
 }
+::placeholder {
+    color: #353535;
+}
+
+/** header */
+.header {
+    width: 100%;
+    height: 235px;
+    background: #F7F7F7;
+    @include display-flex-column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px 5px;
+
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
+        padding: 10px 5px;
+        height: 160px;
+    }
+    @media screen and (min-widht: 1100px) {
+        height :210px;
+    }
+    &__title {
+        margin: 0px 50px 10px 50px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+
+        @media screen and (max-width: 1100px){
+            font-size: 40px;
+            line-height: 47px;
+            
+        }
+    }
+    &__description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 3px 5px 3px;
+
+        @media screen and (min-width: 1100px) 
+        {
+            margin: 25px 0;
         
-    
+    }
+    }
+    &__button {
+        margin-top: 10px;
+        @include button-gradient;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px){
+            margin-top: 20px;
+            
+        }
+    @media screen and (min-widht: 1100px){
+        margin-top: 0px;
+        height: 70px;
+        
+    }
+    }
+    &__button:hover{
+        @include button-gradient-hover;
+    }
+
+        
+    }

@@ -13,7 +13,7 @@
     color: white;
     border: none;
     width: 218px;
-    hieght: 50px;
+    height: 50px;
     background: linear-gradient(-10deg, #9356DC -11.44%, #FF79DA 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -21,10 +21,10 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
-@mixin btn-gradient-hover {
+@mixin button-gradient-hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    transform: translateY(-5px);
+    
 }
 
 @mixin display-flex-center {
