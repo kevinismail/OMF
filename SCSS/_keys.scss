@@ -30,3 +30,16 @@
         transform: rotate(720deg);
     }
 }
+
+@keyframes cards-load {
+    from {
+        transform: translateY(-70%);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
