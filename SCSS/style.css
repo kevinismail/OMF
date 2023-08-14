@@ -1,6 +1,8 @@
+@charset "UTF-8";
 /** import sass modules **/
 /**couleurs**/
 /**** MIXIN Ellipsis ****/
+/**Animation pour le loader**/
 @keyframes delete {
   from {
     height: 100vh;
@@ -28,6 +30,7 @@
     transform: rotate(720deg);
   }
 }
+/**animation pour l'arrivée du menu des pages restaurants**/
 @keyframes cards-load {
   from {
     transform: translateY(-70%);
@@ -409,7 +412,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: delete 0ms 3s forwards;
+  animation: delete 0ms 2s forwards;
   background-color: #F7F7F7;
   background-size: cover;
   background-position: center;
@@ -439,7 +442,7 @@ html {
   align-items: center;
   justify-content: center;
 }
-@media screen and (min-widht: 1100px) {
+@media screen and (min-width: 1100px) {
   .navigation__logo {
     height: 65px;
   }
@@ -508,7 +511,7 @@ html {
 }
 @media screen and (min-widht: 1100px) {
   .header {
-    height: 210px;
+    height: 230px;
   }
 }
 .header__title {
@@ -518,7 +521,7 @@ html {
   line-height: 29px;
   text-align: center;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1100px) {
   .header__title {
     font-size: 40px;
     line-height: 47px;

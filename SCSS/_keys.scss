@@ -1,3 +1,5 @@
+/**Animation pour le loader**/
+
 @keyframes delete {
     from {
         height: 100vh;
@@ -30,7 +32,7 @@
         transform: rotate(720deg);
     }
 }
-
+/**animation pour l'arrivée du menu des pages restaurants**/
 @keyframes cards-load {
     from {
         transform: translateY(-70%);
