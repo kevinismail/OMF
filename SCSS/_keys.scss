@@ -1,0 +1,45 @@
+@keyframes delete {
+    from {
+        height: 100vh;
+        width: 100%;
+    }
+
+    to {
+        height: 0vh;
+        width: 0%;
+    }
+}
+
+@keyframes delay-show {
+    from {
+        transform: scale(0);
+        position: fixed;
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes cards-load {
+    from {
+        transform: translateY(-70%);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

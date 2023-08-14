@@ -1,0 +1,45 @@
+@mixin typo-title {
+    font-family: 'Shrikhand',cursive; 
+}
+@mixin typo-text {
+    font-family: 'Roboto',sans-serif;
+}
+
+@mixin button-gradient {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    border: none;
+    width: 218px;
+    height: 50px;
+    background: linear-gradient(-10deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    transition: transform .5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+@mixin button-gradient-hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    
+}
+
+@mixin display-flex-center {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin display-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+/**** MIXIN Ellipsis ****/
+@mixin text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

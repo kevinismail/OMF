@@ -1,0 +1,480 @@
+/** import sass modules **/
+@import "variables";
+@import "mixins";
+@import "keys";
+@import "menu";
+
+
+
+
+/*** body***/
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    @include typo-text;
+}
+
+.main-container {
+    width: 100%;
+    box-sizing: border-box;
+    animation: delay-show 0ms 3s both;
+}
+.page-container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/**Loaderr**/
+.loader-container {
+    height: 100vh;
+    width: 100%;
+    @include display-flex-center;
+    animation: delete 0ms 3s forwards;
+    background-color: #F7F7F7;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.loader {
+    border: 16px solid white;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+    border-radius: 50%;
+    border-top: 16px solid $secondary-color;
+    border-bottom: 16px solid $primary-color;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s ease-in-out;
+}
+
+
+/** Navigation**/
+
+.navigation {
+    width: 100%;
+    height: 113px;
+&__logo {
+    height: 63px;
+    width: 100%;
+    background-color: $body-color;
+    @include display-flex-center;
+
+    @media screen and (min-widht: 1100px) {
+        height: 65px;
+    }  
+}
+&__logo img{
+    width: 162px;
+}
+&__localisation {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 50px;
+    @include display-flex-center;
+    box-shadow: 0px -2px 2px rgba(0,0,0,0.151);
+}
+&__localisation .fa-solid {
+    color: $dark-grey;
+    margin-right: 10px;
+    @media screen and (min-width: 1100px) {
+        margin-left: 30px;
+        font-size: 13px;
+    }
+        
+    }
+    &__localisation input {
+        width: 125px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+
+        @media screen and (min-width: 1100px) {
+            width: 150px;
+            
+        }
+    }
+}
+::placeholder {
+    color: #353535;
+}
+
+/** header */
+.header {
+    width: 100%;
+    height: 235px;
+    background: #F7F7F7;
+    @include display-flex-column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px 5px;
+
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
+        padding: 10px 5px;
+        height: 160px;
+    }
+    @media screen and (min-widht: 1100px) {
+        height :210px;
+    }
+    &__title {
+        margin: 0px 50px 10px 50px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+
+        @media screen and (max-width: 1100px){
+            font-size: 40px;
+            line-height: 47px;
+            
+        }
+    }
+    &__description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 3px 5px 3px;
+
+        @media screen and (min-width: 1100px) 
+        {
+            margin: 25px 0;
+        
+    }
+    }
+    &__button {
+        margin-top: 10px;
+        @include button-gradient;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px){
+            margin-top: 20px;
+            
+        }
+    @media screen and (min-widht: 1100px){
+        margin-top: 0px;
+        height: 70px;
+        
+    }
+    }
+    &__button:hover{
+        @include button-gradient-hover;
+    }
+
+        
+    }
+.fonctionnement {
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1100px) 
+    {
+        width: 1100px;
+        margin: 0 auto;
+        padding: 40px 10px;
+}
+&__title {
+    @include typo-text;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 30px 20px;
+
+    @media screen and (min-width: 1100px) {
+        margin: 0 0 30px 0px;
+    }
+}
+&__cards {
+    @include display-flex-column;
+    align-items: center;
+    margin-left: 5px;
+
+    @media screen and (min-widht: 1100px){
+        flex: row;
+        justify-content: flex-start;
+        
+    }
+}
+&__cards .card {
+    background: #F7F7F7;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 75%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 25px;
+    transition: all .5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
+            margin: 10px;
+            width: 90%;
+            padding-left: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+
+        }
+
+        @media screen and (min-width: 1100px) {
+            margin-right: 50px;
+        }
+    }
+
+    &__cards .card:hover {
+        background: linear-gradient(200.64deg, #9256dc34 -5.2%, #ff79d938 110.74%);
+        transform: translateY(-5px);
+    }
+
+    &__cards .card h3 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        @media screen and (max-width: 1000px) and (min-width: 1100px) {
+            font-size: 14px;
+        }
+    }
+
+    &__cards .card i {
+        color: #7E7E7E;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    &__cards .card:hover>.fa-solid {
+        color: $primary-color;
+    }
+
+    &__cards .numeros {
+        position: absolute;
+        left: -10px;
+        width: 24px;
+        height: 24px;
+        background-color: $primary-color;
+        font-weight: 500;
+        font-size: 14.1818px;
+        line-height: 17px;
+        color: white;
+        border-radius: 50%;
+        @include display-flex-center;
+    }
+}
+.restaurants {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #F7F7F7;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 0 30px 20px;
+
+        @media screen and (min-width: 1100px) {
+            width: 1100px;
+            margin: 0 auto 30px auto;
+        }
+    }
+
+    &__cards {
+        @include display-flex-column;
+        align-items: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 45%);
+            grid-column-gap: 25px;
+        }
+
+        @media screen and (min-width: 1100px) {
+            width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 50%);
+            grid-row-gap: 30px;
+        }
+
+    }
+
+    &__cards .r-card {
+        width: 85%;
+        height: 240px;
+        border-radius: 15px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: transform .5s;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
+            width: 100%;
+        }
+    }
+
+    &__cards .r-card a {
+        text-decoration: none;
+        color: black;
+    }
+
+    &__cards .r-card img {
+        width: 100%;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        margin: 0;
+
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
+            width: 100%;
+        }
+
+    }
+
+    &__cards .r-card h4 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 10px 0 5px 14px;
+    }
+
+    &__cards .r-card h5 {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 20px;
+        margin: 5px 0 5px 14px;
+    }
+
+    &__cards .r-card .heart-empty {
+        font-size: 23px;
+        color: transparent;
+        -webkit-text-stroke: 1px #000000;
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    }
+
+    &__cards .r-card .heart-full {
+        color: transparent;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 23px;
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    &__cards .r-card .heart-full:hover {
+        opacity: 1;
+    }
+
+    &__cards .r-card p {
+        width: 80px;
+        height: 29px;
+
+        color: #008766;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+
+        background: #99E2D0;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+
+        @include display-flex-center;
+
+        position: absolute;
+        top: 0;
+        right: 10px;
+        transition: transform .5s;
+    }
+
+    &__cards .r-card p:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/*SECTION FOOTER*/
+
+.footer {
+    @include display-flex-column;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 186px;
+    background: $dark-grey;
+
+    @media screen and (min-width: 1100px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 80px;
+        height: 100px;
+    }
+
+    &__title {
+        @include typo-title;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+        color: white;
+
+        @media screen and (min-width: 1100px) {
+            margin: 30px 0 0 20px;
+            font-size: 18px;
+        }
+    }
+
+    &__links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        margin-bottom: 7px;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 1100px) {
+            margin: 30px 0 0 20px;
+            font-size: 14px;
+
+        }
+    }
+
+    &__links i {
+        width: 12px;
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+    &__links {
+        @media screen and (min-width: 1100px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 80px;
+        }
+    }
+
+}
