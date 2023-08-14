@@ -1,0 +1,338 @@
+/*******************PAGES RESTAURANTS**********************/
+
+.arrow-left {
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    font-weight: bold;
+    color: $dark-grey;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/*SECTION HEADER*/
+
+.h-palette {
+    width: 100%;
+    margin: 0;
+
+    &__img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            height: 400px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 100%;
+            height: 275px;
+        }
+    }
+}
+
+/*MAIN SECTION MENU*/
+
+.menu-container {
+    background: #F7F7F7;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    top: -50px;
+    position: relative;
+    margin-bottom: -50px;
+
+    @media screen and (min-width: 1024px) {
+        width: 1025px;
+        margin: 0 auto -50px auto;
+    }
+}
+
+.page-container .navigation {
+    height: auto;
+
+    &__logo {
+        margin-bottom: -1px;
+    }
+}
+
+
+.menu {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        /*width: 307px;*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        @media screen and (min-width: 1024px) {
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            justify-content: center;
+        }
+
+        & .heart-bloc {
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__title h1 {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 41px;
+        color: #101010;
+        padding-left: 15px;
+        @include typo-title;
+    }
+
+    &__title .heart-empty {
+        position: absolute;
+        top: 13px;
+        right: 25px;
+        font-size: 23px;
+        color: transparent;
+        -webkit-text-stroke: 1px #000000;
+
+
+        @media screen and (min-width: 1024px) {
+            top: 13px;
+            right: 10px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            top: 13px;
+            right: 10px;
+        }
+
+    }
+
+    &__title .heart-full {
+        position: absolute;
+        color: transparent;
+        top: 13px;
+        right: 25px;
+        font-size: 23px;
+        opacity: 0;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: opacity .6s;
+
+        @media screen and (min-width: 1024px) {
+            top: 13px;
+            right: 10px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            top: 13px;
+            right: 10px;
+        }
+    }
+
+    &__title .heart-full:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 15px;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 200px;
+            padding-left: 0px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+
+    &__bord {
+        border: 1px solid #99E2D0;
+        margin-left: 15px;
+        width: 40px;
+        position: relative;
+        top: -5px;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 200px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            margin: 0 auto;
+            top: 5px;
+            width: 40px;
+
+        }
+    }
+
+    &__cards {
+        background: $body-color;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15.0431px;
+        margin: 15px;
+        padding: 0 15px;
+        width: 90%;
+        height: 72px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+
+        @include display-flex-column;
+        justify-content: center;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        position: relative;
+
+        &:nth-child(1) {
+            animation: cards-load .6s ease-in .5s forwards;
+            transform: scale(0);
+        }
+
+        &:nth-child(2) {
+            animation: cards-load .6s ease-in .7s forwards;
+            transform: scale(0);
+        }
+
+        &:nth-child(3) {
+            animation: cards-load .6s ease-in .9s forwards;
+            transform: scale(0);
+        }
+
+        &:nth-child(4) {
+            animation: cards-load .6s ease-in .9s forwards;
+            transform: scale(0);
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 634px;
+            height: 72px;
+            margin-left: 200px;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            width: 634px;
+            height: 72px;
+            margin: 15px auto;
+        }
+    }
+
+    /************************************CHECKED **************************/
+    &__checked {
+        height: 72px;
+        width: 0px;
+        @include display-flex-center;
+        background: #99E2D0;
+        border-radius: 0px 15px 15px 0px;
+        position: absolute;
+        right: 0px;
+        transition: all .5s;
+        opacity: 0;
+    }
+
+    &__cards:hover .menu__checked {
+        width: 59px;
+        opacity: 1;
+    }
+
+    &__cards:hover p {
+        transform: translateX(-52px);
+    }
+
+    &__cards .alignement {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__cards h3 {
+        width: 300px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0;
+        @include text-ellipsis;
+        transition: all .1s;
+    }
+
+    &__cards h4 {
+        width: 300px;
+        font-weight: 300;
+        font-size: 15.0431px;
+        line-height: 18px;
+        margin: 4px 0;
+        @include text-ellipsis;
+        transition: all .1s;
+
+        @media screen and (min-width: 1024px) {
+            width: 600px;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            width: 600px;
+        }
+    }
+
+    &__cards:hover h4 {
+        width: 500px;
+        margin-right: 90px;
+    }
+
+    &__cards:hover h3 {
+        width: 250px;
+        margin-right: 90px;
+
+        @media screen and (min-width: 1024px) {
+            width: 600px;
+        }
+    }
+
+    &__cards p {
+        margin: 0;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: $dark-grey;
+        transition: transform .5s;
+
+    }
+
+    &__cards i {
+        color: $body-color;
+        font-size: 20px;
+    }
+}
+
+.order {
+    width: 100%;
+    @include display-flex-center;
+    padding: 40px 0;
+
+    @media screen and (min-width: 1024px) {
+        padding: 30px 0;
+    }
+
+    &__button {
+        @include button-gradient;
+    }
+
+    &__button:hover {
+        @include button-gradient-hover;
+    }
+}
